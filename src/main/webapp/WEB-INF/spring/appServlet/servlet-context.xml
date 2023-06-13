@@ -34,4 +34,11 @@
 		</websocket:handshake-interceptors>
 	</websocket:handlers>
 	
+	<!-- 웹소켓 채팅 -->
+	<beans:bean id="chattingHandler" class="kr.or.ddit.ChattingHandler"/>
+	<websocket:handlers>
+		<websocket:mapping handler="chattingHandler" path="/chatting"/>
+		<websocket:sockjs></websocket:sockjs>
+	</websocket:handlers>
+	
 </beans:beans>
